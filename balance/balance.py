@@ -10,7 +10,9 @@ class Balance:
 
     def __init__(self):
         """Prevent direct instantiation; use get_instance() instead."""
-        raise RuntimeError("Use Balance.get_instance() to access the Balance singleton.")
+        raise RuntimeError(
+            "Use Balance.get_instance() to access the Balance singleton."
+        )
 
     @classmethod
     def get_instance(cls):

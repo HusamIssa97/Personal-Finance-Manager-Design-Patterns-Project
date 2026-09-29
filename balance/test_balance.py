@@ -1,7 +1,9 @@
 import unittest
+
 from balance.balance import Balance
 from transaction.transaction import Transaction
 from transaction.transaction_category import TransactionCategory
+
 
 class TestBalance(unittest.TestCase):
 
@@ -38,6 +40,7 @@ class TestBalance(unittest.TestCase):
     def test_apply_transaction_invalid_category(self):
         class FakeCategory:
             pass
+
         t = Transaction(100, FakeCategory())
         with self.assertRaises(ValueError):
             self.balance.apply_transaction(t)
@@ -47,6 +50,7 @@ class TestBalance(unittest.TestCase):
         self.balance.add_expense(50)
         self.balance.reset()
         self.assertEqual(self.balance.get_balance(), 0.0)
+
 
 if __name__ == "__main__":
     unittest.main()

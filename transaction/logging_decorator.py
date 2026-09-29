@@ -15,7 +15,9 @@ class LoggingTransactionDecorator:
 
     def __init__(self, transaction: Transaction):
         if not isinstance(transaction, Transaction):
-            raise TypeError("LoggingTransactionDecorator requires a Transaction")
+            raise TypeError(
+                "LoggingTransactionDecorator requires a Transaction"
+            )
         self._transaction = transaction
         self.logged = False
 

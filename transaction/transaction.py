@@ -11,9 +11,14 @@ class Transaction:
         self.category = category
 
     def __str__(self):
-        return f"Transaction(${self.amount}, category='{self.category}')"
+        return (
+            f"Transaction(${self.amount}, category='{self.category}')"
+        )
 
     def __eq__(self, other):
         if not isinstance(other, Transaction):
             return NotImplemented
-        return self.amount == other.amount and self.category == other.category
+        return (
+            self.amount == other.amount
+            and self.category == other.category
+        )

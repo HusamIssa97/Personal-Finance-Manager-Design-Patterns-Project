@@ -1,7 +1,8 @@
 import unittest
+
+from transaction.logging_decorator import LoggingTransactionDecorator
 from transaction.transaction import Transaction
 from transaction.transaction_category import TransactionCategory
-from transaction.logging_decorator import LoggingTransactionDecorator
 
 
 class TestLoggingTransactionDecorator(unittest.TestCase):
